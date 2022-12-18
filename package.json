@@ -3,6 +3,7 @@
   "displayName": "MIMA syntax-highlighting",
   "description": "This extension implements rudimentary syntax-highlighting for the language used in MIMA-flux",
   "version": "0.0.1",
+  "private": "true",
   "engines": {
     "vscode": "^1.74.0"
   },
@@ -10,16 +11,29 @@
     "Programming Languages"
   ],
   "contributes": {
-    "languages": [{
-      "id": "mima",
-      "aliases": ["MIMA", "mima"],
-      "extensions": [".mima"],
-      "configuration": "./language-configuration.json"
-    }],
-    "grammars": [{
-      "language": "mima",
-      "scopeName": "source.mima",
-      "path": "./syntaxes/mima.tmLanguage.json"
-    }]
+    "languages": [
+      {
+        "id": "mima",
+        "aliases": [
+          "MIMA",
+          "mima"
+        ],
+        "extensions": [
+          ".mima"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "repository": {
+      "type": "git",
+      "url": "git://github.com/Zelyson/mima-syntax-highlighting.git"
+    },
+    "grammars": [
+      {
+        "language": "mima",
+        "scopeName": "source.mima",
+        "path": "./syntaxes/mima.tmLanguage.json"
+      }
+    ]
   }
 }
