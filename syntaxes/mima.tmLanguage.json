@@ -3,18 +3,23 @@
 	"name": "MIMA",
 	"patterns": [
 		{
-			"include": "#keywords"
+			"include": "#comments"
 		},
 		{
-			"include": "#strings"
+			"include": "#variable"
+		},
+		{
+			"include": "#keywords"
 		}
 	],
 	"repository": {
 		"keywords": {
-			"patterns": [{
-				"name": "keyword.control.mima",
-				"match": "\\b(if|while|for|return)\\b"
-			}]
+			"patterns": [
+				{
+					"name": "keyword.control.mima",
+					"match": "\\b(LDC|LDV|STV|ADD|AND|OR|XOR|EQL|JMP|JMN|LDIV|STIV|JMS|JIND|HALT|NOT|RAR)\\b"
+				}
+			]
 		},
 		"strings": {
 			"name": "string.quoted.double.mima",
@@ -26,6 +31,15 @@
 					"match": "\\\\."
 				}
 			]
+		},
+		"comments": {
+			"name": "comment.line.mima",
+			"begin": ";",
+			"end": "\\n"
+		},
+		"variable": {
+			"name": "variable.mima",
+			"match": "\\W+\\d+\\s+\\r?$"
 		}
 	},
 	"scopeName": "source.mima"

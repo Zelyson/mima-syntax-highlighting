@@ -2,8 +2,9 @@
 
 All notable changes to the "mima-syntax-highlighting" extension will be documented in this file.
 
-Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
+## [v0.0.1] (Initial release)
+### Added
 
-## [Unreleased]
-
-- Initial release
+- Argument colour support
+- Keyword colour support
+- Comment colour support
